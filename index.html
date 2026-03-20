@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhi Allam | IT Audit & Associate Project Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4f46e5',
+            secondary: '#06b6d4',
+            darkbg: '#0f172a'
+          },
+          boxShadow: {
+            glow: '0 0 40px rgba(79, 70, 229, 0.35)'
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, Arial, sans-serif; }
+    .glass { backdrop-filter: blur(14px); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); }
+    .dark .glass { background: rgba(15,23,42,0.55); border: 1px solid rgba(255,255,255,0.08); }
+    .gradient-text {
+      background: linear-gradient(90deg, #4f46e5, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .floating {
+      animation: float 5s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-white transition duration-300">
+  <!-- Background Blobs -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute top-10 left-10 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl floating"></div>
+    <div class="absolute bottom-10 right-10 w-80 h-80 bg-cyan-400/20 rounded-full blur-3xl floating"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 glass mx-4 mt-4 rounded-2xl">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <h1 class="text-xl md:text-2xl font-bold gradient-text">Abhinash Allam</h1>
+      <div class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#about" class="hover:text-primary">About</a>
+        <a href="#skills" class="hover:text-primary">Skills</a>
+        <a href="#certifications" class="hover:text-primary">Certifications</a>
+        <a href="#projects" class="hover:text-primary">Projects</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-sm">Toggle Theme</button>
+        <button id="menuBtn" class="md:hidden px-3 py-2 rounded-xl bg-primary text-white">☰</button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-3 text-sm">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="max-w-7xl mx-auto px-6 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+    <div data-aos="fade-right">
+      <p class="uppercase tracking-[0.25em] text-xs text-primary font-semibold mb-4">Welcome to my portfolio</p>
+      <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Hi, I'm <span class="gradient-text">Abhinash Allam</span></h2>
+      <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-3">Associate Project Manager-IT Audit</p>
+      <p class="text-base md:text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-xl">Experienced professional with 2.6+ years in ITGC audits, SOX compliance, VAPT, user access reviews, control testing, and governance frameworks. Passionate about audit excellence, risk management, and technology-driven controls.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact" class="px-6 py-3 rounded-2xl bg-primary text-white shadow-glow hover:scale-105 transition">Hire Me</a>
+        <a id="resumeBtn" href="#" class="px-6 py-3 rounded-2xl border border-slate-300 dark:border-slate-700 hover:bg-white/10 transition">Download Resume</a>
+      </div>
+    </div>
+    <div data-aos="fade-left" class="flex justify-center">
+      <div class="glass rounded-3xl p-6 shadow-2xl max-w-md w-full">
+        <img id="profileImage" src="Profile_bg_White.png" alt="Profile" class="rounded-3xl w-full h-[420px] object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-7xl mx-auto px-6 py-14">
+    <div class="glass rounded-3xl p-8 md:p-12" data-aos="fade-up">
+      <h3 class="text-3xl font-bold mb-6">About Me</h3>
+      <p id="aboutText" class="text-slate-600 dark:text-slate-300 leading-8 text-lg">I specialize in IT Audit, VAPT, CICRA, SOX 404, and IT General Controls with hands-on experience in risk assessment, access management, control testing, evidence validation, and process improvement. I work with tools like ServiceNow, JIRA, Active Directory, and Oracle to support strong compliance and governance practices.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="max-w-7xl mx-auto px-6 py-14">
+    <h3 class="text-3xl font-bold mb-8" data-aos="fade-up">Core Skills</h3>
+    <div id="skillsGrid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="max-w-7xl mx-auto px-6 py-14">
+    <h3 class="text-3xl font-bold mb-8" data-aos="fade-up">Certifications</h3>
+    <div id="certificationsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-7xl mx-auto px-6 py-14">
+    <h3 class="text-3xl font-bold mb-8" data-aos="fade-up">Projects & Case Studies</h3>
+    <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-7xl mx-auto px-6 py-14">
+    <div class="glass rounded-3xl p-8 md:p-12" data-aos="fade-up">
+      <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+      <form action="https://formspree.io/f/xgondleo" method="POST" class="grid md:grid-cols-2 gap-6">
+        <input type="text" name="name" placeholder="Your Name" class="p-4 rounded-2xl bg-white/10 border border-slate-300 dark:border-slate-700 outline-none" required>
+        <input type="email" name="email" placeholder="Your Email" class="p-4 rounded-2xl bg-white/10 border border-slate-300 dark:border-slate-700 outline-none" required>
+        <textarea name="message" placeholder="Your Message" rows="5" class="md:col-span-2 p-4 rounded-2xl bg-white/10 border border-slate-300 dark:border-slate-700 outline-none" required></textarea>
+        <button type="submit" class="md:col-span-2 px-6 py-3 rounded-2xl bg-primary text-white shadow-glow hover:scale-[1.02] transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="max-w-7xl mx-auto px-6 py-10 text-center text-slate-500 dark:text-slate-400">
+    <p>© 2026 Abhi Allam. Built with GitHub Pages.</p>
+  </footer>
+
+  <script>
+  const defaultData = {
+    profile: {
+      about: "I specialize in IT Audit, VAPT, CICRA, SOX 404, and IT General Controls with hands-on experience in risk assessment, access management, control testing, evidence validation, and process improvement. I work with tools like ServiceNow, JIRA, Active Directory, and Oracle to support strong compliance and governance practices.",
+      resumeUrl: "https://drive.google.com/file/d/17FCX1bgru8BMflhCa96u-NESZPmgue1R/view?usp=drive_link",
+      // profileImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43d?auto=format&fit=crop&w=800&q=80"
+      profileImage: "Profile_bg_White.png"
+    },
+    skills: [
+      "ITGC Audits", "SOX 404 Compliance", "SOC 2", "User Access Reviews",
+      "Control Testing", "Getsh", "BigBucket", "ServiceNow",
+      "JIRA", "Active Directory", "Okta", "Risk Assessment"
+    ],
+    certifications: [
+      { title: "SOX Compliance Fundamentals", issuer: "Professional Certification", date: "2025", image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" },
+      { title: "ServiceNow Certification", issuer: "Professional Certification", date: "2025", image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" },
+      { title: "Cybersecurity Fundamentals", issuer: "Professional Certification", date: "2025", image: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80" }
+    ],
+    projects: [
+      { title: "Automated Sentiment Analysis of Twitter Data", description: "NLP-based project focused on sentiment classification and analytics.", link: "#" },
+      { title: "Internal IT Audit Reporting Framework", description: "Structured walkthrough and reporting framework for IT internal audit documentation.", link: "#" },
+      { title: "SOX / ITGC Control Testing Showcase", description: "Practical examples of access reviews, control design, and operating effectiveness testing.", link: "#" }
+    ]
+  };
+
+  const SHEET_URLS = {
+    profile: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSqwytZcfgNOih2GWQttF9IaW8IefYx7JUGkNgcszYij_afGfxlrEzi0X2a7C35CZ-fq3oqqe_s3wme/pub?gid=0&single=true&output=csv",
+    skills: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSqwytZcfgNOih2GWQttF9IaW8IefYx7JUGkNgcszYij_afGfxlrEzi0X2a7C35CZ-fq3oqqe_s3wme/pub?gid=751652432&single=true&output=csv",
+    certifications: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSqwytZcfgNOih2GWQttF9IaW8IefYx7JUGkNgcszYij_afGfxlrEzi0X2a7C35CZ-fq3oqqe_s3wme/pub?gid=435786386&single=true&output=csv",
+    projects: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSqwytZcfgNOih2GWQttF9IaW8IefYx7JUGkNgcszYij_afGfxlrEzi0X2a7C35CZ-fq3oqqe_s3wme/pub?gid=184125554&single=true&output=csv"
+  };
+
+  function parseCSVLine(line) {
+    const result = [];
+    let current = '';
+    let inQuotes = false;
+
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      const next = line[i + 1];
+
+      if (char === '"') {
+        if (inQuotes && next === '"') {
+          current += '"';
+          i++;
+        } else {
+          inQuotes = !inQuotes;
+        }
+      } else if (char === ',' && !inQuotes) {
+        result.push(current.trim());
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+
+    result.push(current.trim());
+    return result;
+  }
+
+  function parseCSV(csvText) {
+    const lines = csvText.trim().split(/\r?\n/).filter(Boolean);
+    if (!lines.length) return [];
+
+    const headers = parseCSVLine(lines[0]).map(h => h.replace(/^"|"$/g, '').trim());
+
+    return lines.slice(1).map(line => {
+      const values = parseCSVLine(line).map(v => v.replace(/^"|"$/g, '').trim());
+      const obj = {};
+      headers.forEach((header, index) => {
+        obj[header] = values[index] || '';
+      });
+      return obj;
+    });
+  }
+
+  async function fetchCSV(url) {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('Failed to fetch sheet');
+    const text = await res.text();
+    return parseCSV(text);
+  }
+
+  async function loadData() {
+    try {
+      const [profileRows, skillsRows, certRows, projectRows] = await Promise.all([
+        fetchCSV(SHEET_URLS.profile),
+        fetchCSV(SHEET_URLS.skills),
+        fetchCSV(SHEET_URLS.certifications),
+        fetchCSV(SHEET_URLS.projects)
+      ]);
+
+      const liveData = {
+        profile: {
+          about: profileRows[0]?.about || defaultData.profile.about,
+          resumeUrl: profileRows[0]?.resumeUrl || defaultData.profile.resumeUrl,
+          profileImage: profileRows[0]?.profileImage || defaultData.profile.profileImage
+        },
+        skills: skillsRows.map(row => row.name).filter(Boolean),
+        certifications: certRows.map(row => ({
+          title: row.title || '',
+          issuer: row.issuer || '',
+          date: row.date || '',
+          image: row.image || ''
+        })).filter(cert => cert.title),
+        projects: projectRows.map(row => ({
+          title: row.title || '',
+          description: row.description || '',
+          link: row.link || '#'
+        })).filter(project => project.title)
+      };
+
+      renderPortfolio(liveData);
+    } catch (err) {
+      console.error('Using default data because sheet fetch failed:', err);
+      renderPortfolio(defaultData);
+    }
+  }
+
+  function renderPortfolio(data) {
+    document.getElementById('aboutText').textContent = data.profile?.about || defaultData.profile.about;
+    document.getElementById('resumeBtn').href = data.profile?.resumeUrl || '#';
+    document.getElementById('profileImage').src = data.profile?.profileImage || defaultData.profile.profileImage;
+
+    const skillsGrid = document.getElementById('skillsGrid');
+    skillsGrid.innerHTML = (data.skills || []).map(skill => `
+      <div class="glass rounded-3xl p-6 hover:-translate-y-2 transition duration-300" data-aos="zoom-in">
+        <p class="font-semibold text-lg">${skill}</p>
+      </div>
+    `).join('');
+
+    const certGrid = document.getElementById('certificationsGrid');
+    certGrid.innerHTML = (data.certifications || []).map(cert => `
+      <div class="glass rounded-3xl overflow-hidden hover:-translate-y-2 transition duration-300" data-aos="fade-up">
+        <img src="${cert.image}" alt="${cert.title}" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-bold mb-2">${cert.title}</h4>
+          <p class="text-slate-600 dark:text-slate-300">${cert.issuer}</p>
+          <p class="text-sm text-slate-500 mt-2">${cert.date}</p>
+        </div>
+      </div>
+    `).join('');
+
+    const projectGrid = document.getElementById('projectsGrid');
+    projectGrid.innerHTML = (data.projects || []).map(project => `
+      <div class="glass rounded-3xl p-6 hover:-translate-y-2 transition duration-300" data-aos="fade-up">
+        <h4 class="text-xl font-bold mb-3">${project.title}</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">${project.description}</p>
+        <a href="${project.link}" target="_blank" class="text-primary font-semibold">View Details →</a>
+      </div>
+    `).join('');
+  }
+
+  // Theme Toggle
+  const themeToggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+  });
+
+  // Mobile Menu
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+  AOS.init({ duration: 900, once: true });
+  loadData();
+</script>
+</body>
+</html>
